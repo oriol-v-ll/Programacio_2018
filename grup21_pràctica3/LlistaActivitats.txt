@@ -1,0 +1,3 @@
+Visita a Paris;Ruta turistica;Paris;
+Visita al Louvre;Visita guiada al museu;Paris;
+Visita a la Sagrada Familia;Visita guiada a la Sagrada Familia;Barcelona;
