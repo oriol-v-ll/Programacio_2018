@@ -19,6 +19,8 @@ public class ProgramaPrincipal {
 		int opcio = 0, dia, mes, any;
 		data dataActual = null;
 		while (dataActual == null) {
+			
+			
 			try {
 				System.out.println("Introdueix el dia d'avui");
 				dia = Integer.parseInt(teclat.nextLine());
@@ -30,7 +32,7 @@ public class ProgramaPrincipal {
 					throw new DataNoValida();
 				dataActual = new data(dia, mes, any);
 			} catch (NumberFormatException e) {
-				System.out.println("ERROR Has d'introduir un valor numèric\n\n");
+				System.out.println("ERROR Has d'introduir un valor numï¿½ric\n\n");
 			} catch (DataNoValida e) {
 				System.out.println(e.getMessage());
 			}
@@ -44,9 +46,9 @@ public class ProgramaPrincipal {
 		llegirFitxerActivitats(llistaActivitatsAgencia);
 		llegirFitxerClients(llistaClientsAgencia);
 		LlegirFitxerReserves(llistaReservesAgencia);
-		System.out.println("Quina aplicació vols obrir?\n");
-		System.out.println("\t1. Aplicació per a l'agència de viatges\n");
-		System.out.println("\t2. Aplicació per als clients\n");
+		System.out.println("Quina aplicaciï¿½ vols obrir?\n");
+		System.out.println("\t1. Aplicaciï¿½ per a l'agï¿½ncia de viatges\n");
+		System.out.println("\t2. Aplicaciï¿½ per als clients\n");
 		System.out.println("\t3. Tancar el programa\n");
 		while (opcio != 3) {
 			try {
@@ -65,14 +67,14 @@ public class ProgramaPrincipal {
 				case 3:
 					break;
 				}
-				System.out.println("Quina aplicació vols obrir?\n");
-				System.out.println("\t1. Aplicació per a l'agència de viatges\n");
-				System.out.println("\t2. Aplicació per als clients\n");
+				System.out.println("Quina aplicaciï¿½ vols obrir?\n");
+				System.out.println("\t1. Aplicaciï¿½ per a l'agï¿½ncia de viatges\n");
+				System.out.println("\t2. Aplicaciï¿½ per als clients\n");
 				System.out.println("\t3. Tancar el programa\n");
 			} catch (ValorForaRang e) {
 				System.out.println(e.getMessage());
 			} catch (NumberFormatException e) {
-				System.out.println("ERROR Has d'introduir un valor numèric");
+				System.out.println("ERROR Has d'introduir un valor numï¿½ric");
 			}
 
 		}
@@ -148,14 +150,14 @@ public class ProgramaPrincipal {
 			} catch (ValorForaRang e) {
 				System.out.println(e.getMessage());
 			} catch (NumberFormatException e) {
-				System.out.println("ERROR Has d'introduir un valor numèric");
+				System.out.println("ERROR Has d'introduir un valor numï¿½ric");
 			}
 		}
 	}
 
 	// metode que mostra el menu de l'agencia per pantalla
 	public static void mostraMenuAgencia() {
-		System.out.println("Opcions del menú: \n");
+		System.out.println("Opcions del menï¿½: \n");
 		System.out.println("\t1. Afegir un transport\n");
 		System.out.println("\t2. Afegir un circuit\n");
 		System.out.println("\t3. Afegir una activitat\n");
@@ -164,13 +166,13 @@ public class ProgramaPrincipal {
 		System.out.println("\t6. Mostrar els productes de viatge amb alguna reserva\n");
 		System.out.println("\t7. Mostrar els productes de viatge amb places disponibles\n");
 		System.out.println("\t8. Mostrar els productes de viatge no caducats\n");
-		System.out.println("\t9. Mostrar el producte de viatge amb més reserves\n");
+		System.out.println("\t9. Mostrar el producte de viatge amb mï¿½s reserves\n");
 		System.out.println("\t10. Mostrar la llista de productes\n");
 		System.out.println("\t11. Mostrar la llista d'activitats\n");
 		System.out.println("\t12. Mostrar la llista de clients\n");
 		System.out.println("\t13. Mostrar la llista de reserves\n");
 		System.out.println("\t14. Tancar programa\n");
-		System.out.println("\tSelecciona una opció: ");
+		System.out.println("\tSelecciona una opciï¿½: ");
 	}
 
 	// opcio 1 del menu que afegeix un transport a la llista de productes
@@ -216,7 +218,7 @@ public class ProgramaPrincipal {
 						ciutatOrigen, ciutatDesti, dataSortida, dataTornada);
 				aux.afegirTransport(transportAfegir);
 			} catch (NumberFormatException e) {
-				System.out.println("ERROR Has d'introduir un valor numèric ");
+				System.out.println("ERROR Has d'introduir un valor numï¿½ric ");
 			} catch (DataNoValida e) {
 				System.out.println(e.getMessage());
 			}
@@ -240,9 +242,9 @@ public class ProgramaPrincipal {
 				preuCircuit = Double.parseDouble(teclat.nextLine());
 				System.out.println("Introdueix el nombre de places");
 				numPlaces = Integer.parseInt(teclat.nextLine());
-				System.out.println("Introdueix el país on es desenvoluparà el circuit");
+				System.out.println("Introdueix el paï¿½s on es desenvoluparï¿½ el circuit");
 				pais = teclat.nextLine();
-				System.out.println("Introdueix la duració del circuit");
+				System.out.println("Introdueix la duraciï¿½ del circuit");
 				dies = Integer.parseInt(teclat.nextLine());
 				System.out.println("Introdueix el dia d'inici");
 				dia = Integer.parseInt(teclat.nextLine());
@@ -265,7 +267,7 @@ public class ProgramaPrincipal {
 				circuitAfegir = new circuit(nomCircuit, tipusCircuit, preuCircuit, numPlaces, numPlaces, pais, dies,
 						dataInici, dataFinal, 50);
 			} catch (NumberFormatException e) {
-				System.out.println("ERROR Has d'introduir un valor numèric ");
+				System.out.println("ERROR Has d'introduir un valor numï¿½ric ");
 			} catch (DataNoValida e) {
 				System.out.println(e.getMessage());
 			}
